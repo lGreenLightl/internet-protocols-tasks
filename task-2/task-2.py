@@ -27,7 +27,7 @@ def sntp_server():
         # required data is located in the 11th element of the array
         result_time = struct.unpack('!12I', data)[10]
 
-        with open('../resources/config.txt', 'r', encoding='utf-8') as file:
+        with open('../resources-2/config.txt', 'r', encoding='utf-8') as file:
             try:
                 seconds = re.match(PATTERN, file.readline())
                 if seconds.group(1) == '+':
